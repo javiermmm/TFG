@@ -1,0 +1,187 @@
+div.error
+{
+  margin: 1em;
+  padding: 1em;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black;
+  color: white;
+  background-color: red;
+  font-weight: bold;
+}
+
+div.error:before
+{
+  content: "ERROR: ";
+}
+
+div.warning
+{
+  margin: 1em;
+  padding: 1em;
+  border-width: 2px;
+  border-style: solid;
+  border-color: black;
+  color: black;
+  background-color: yellow;
+  font-weight: bold;
+}
+
+div.warning:before
+{
+  content: "AVISO: ";
+}
+
+
+div.note
+{
+  margin: 1em 3em;
+  padding: 1em;
+  border-width: 1px;
+  border-style: dotted;
+  background-color: silver;
+  text-align:justify;
+}
+
+a.togglesign
+{
+  font-family: "Lucida Console", Monaco, monospace;
+  text-decoration: none;
+  color: black;
+}
+
+a.togglesign:before
+{
+  content: "[";
+}
+
+a.togglesign:after
+{
+  content: "] ";
+}
+
+
+div#pistas {
+  margin: 1em 3em;
+  display: none;
+}
+
+div#infoProfe {
+  margin: 1em 3em;
+  display: none;  
+}
+
+p
+{
+  text-align:justify;
+  /*text-indent:1.0em;*/
+}
+
+li
+{
+  text-align:justify;
+  text-indent:0.0em;
+}
+
+div.quote
+{ 
+  margin: 0 5em;
+}
+
+p.image
+{
+  text-align:center;
+}
+
+div.code
+{
+  text-indent:0.0em;
+  background-color: #f9f9f9;
+  padding:0.5em;
+  margin:1em;
+  border-style:dashed;
+  border-width: 1px;
+  font-family: "Lucida Console", Monaco, monospace;
+  white-space: pre
+}
+
+table.metadata {
+  border: 1px solid black;
+  margin: 1%;
+  width: 98%;
+}
+
+table.metadata th {
+  background-color: limegreen;
+  width: 20%;
+  color: white;
+}
+
+table.metadata td {
+  color: green;
+  border: 1px solid limegreen;
+  border-collapse: collapse;
+  padding-left: 0.5em;
+  padding-bottom: 3px;
+  padding-top: 3px;
+  margin: 0px;
+}
+
+table.metadata td a:link {
+    color: olive;
+}
+
+table.metadata td a:hover {
+    color: green;
+}
+
+/*
+ \figure en LaTeX. Centrado horizontalmente y
+ en formato tabla
+*/
+.figure { 
+    display: table;
+    margin: 0px auto;
+/*    border: 5px solid black;*/
+}
+
+.figureContent { 
+    display: table;
+    margin: 0px auto;
+/*    border: 3px solid green; */
+}
+
+
+.figure .caption { 
+    text-align: center;
+    margin-top: 8px;
+}
+
+.subfigure { 
+    display: table-cell;
+/*    border: 1px solid red; */
+    margin: 5px;
+    vertical-align: bottom;
+}
+
+.subfigureContent { 
+    padding: 0 8px;
+}
+
+/*
+ :@ En el css de la página del repositorio
+ el span (sin clase ni nada...) se define como
+ display: inline-block y eso ... ¡¡¡rompe lo que es
+ el span!!! Esto afecta a MathJax
+ Cuando se cargue esta hoja de estilos, lo anulamos
+ para el contenido.
+
+ También podríamos haber puesto
+
+  span .MathJax_MathML
+
+ porque MathJax pone esa clase en los span que usa.
+*/
+#content span { 
+  display: inline;
+}
